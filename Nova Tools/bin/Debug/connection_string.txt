@@ -1,0 +1,1 @@
+Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="D:\Nova Tools Program\Nova Tools\Nova Tools\Nova.mdf";Integrated Security=True;Connect Timeout=30

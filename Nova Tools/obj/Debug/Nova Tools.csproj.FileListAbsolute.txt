@@ -1,0 +1,29 @@
+D:\Nova Tools Program\Nova Tools\Nova Tools\bin\Debug\Nova.mdf
+D:\Nova Tools Program\Nova Tools\Nova Tools\bin\Debug\Nova_log.ldf
+D:\Nova Tools Program\Nova Tools\Nova Tools\bin\Debug\Nova Tools.exe.config
+D:\Nova Tools Program\Nova Tools\Nova Tools\bin\Debug\Nova Tools.exe
+D:\Nova Tools Program\Nova Tools\Nova Tools\bin\Debug\Nova Tools.pdb
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova Tools.csprojAssemblyReference.cache
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Form1.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Properties.Resources.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova Tools.csproj.GenerateResource.cache
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova Tools.csproj.CoreCompileInputs.cache
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova Tools.exe
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova Tools.pdb
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Firma.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Clienti.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Client_nou.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Furnizori.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Furnizor_nou.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Creeaza_intrare.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Intrari.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Produs_nou.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Plati.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Nir.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Produse.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Creeaza_iesire.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Iesiri.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Facturi.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Factura.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Stoc.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Stoc_nou.resources
