@@ -94,11 +94,11 @@ namespace Nova_Tools
 
         private void Plati_Load(object sender, EventArgs e)
         {
-            using (StreamReader sr = new StreamReader("connection_string.txt"))
-            {
-                string connection_string = sr.ReadLine();
-                conn = new SqlConnection(connection_string);
-            }
+            string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).ToString();
+            path = path.Remove(path.Length - 9);
+            path = path.Remove(0, 6);
+            string connection_string = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =" + path + @"SharpBill.mdf; Integrated Security = True; Connect Timeout = 30";
+            conn = new SqlConnection(connection_string);
 
             start_date_picker.Format = end_date_picker.Format = DateTimePickerFormat.Custom;
             start_date_picker.CustomFormat = end_date_picker.CustomFormat = "dd/MM/yyyy";
@@ -294,10 +294,10 @@ namespace Nova_Tools
                     valoare_plata = Math.Round(valoare_plata, 2);
                     row1.Cells[5].Value = Convert.ToDouble(niruri.Rows[Convert.ToInt32(row1.Cells[7].Value.ToString())]["Rest_de_plata"]);
 
-                    niruri.Rows[Convert.ToInt32(row1.Cells[7].Value.ToString())]["Mod_plata"] = modalitate_de_plata;
-
                     if (Convert.ToDouble(niruri.Rows[Convert.ToInt32(row1.Cells[7].Value.ToString())]["Rest_de_plata"]) == 0)
-                        niruri.Rows[Convert.ToInt32(row1.Cells[7].Value.ToString())]["Data_platii"] = DateTime.Now;
+                        niruri.Rows[Convert.ToInt32(row1.Cells[7].Value.ToString())]["Mod_plata"] = modalitate_de_plata;
+
+                    niruri.Rows[Convert.ToInt32(row1.Cells[7].Value.ToString())]["Data_platii"] = DateTime.Now;
                 }
             }
             foreach (DataGridViewRow row1 in dataGridView1.Rows)
@@ -310,9 +310,9 @@ namespace Nova_Tools
 
             foreach(DataRow row1 in niruri.Rows)
             {
-                if (Convert.ToDouble(row1["Rest_de_plata"]) != 0 || DateTime.Parse(row1["Data_platii"].ToString()).ToShortDateString() != DateTime.Parse(DateTime.Now.ToShortDateString()).ToShortDateString())
+                if (row1["Data_platii"].ToString() == "" || DateTime.Parse(row1["Data_platii"].ToString()).ToShortDateString() != DateTime.Parse(DateTime.Now.ToShortDateString()).ToShortDateString())
                     continue;
-                MessageBox.Show("da");
+
                 update.Parameters.Clear();
                 update.Parameters.AddWithValue("@rest_de_plata", Convert.ToDouble(row1["Rest_de_plata"]));
                 update.Parameters.AddWithValue("@mod_plata", row1["Mod_plata"].ToString());

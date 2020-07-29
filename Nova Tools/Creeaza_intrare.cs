@@ -182,11 +182,12 @@ namespace Nova_Tools
 
         private void Creeaza_intrare_Load(object sender, EventArgs e)
         {
-            using (StreamReader sr = new StreamReader("connection_string.txt"))
-            {
-                string connection_string = sr.ReadLine();
-                conn = new SqlConnection(connection_string);
-            }
+            string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).ToString();
+            path = path.Remove(path.Length - 9);
+            path = path.Remove(0, 6);
+            string connection_string = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =" + path + @"SharpBill.mdf; Integrated Security = True; Connect Timeout = 30";
+            conn = new SqlConnection(connection_string);
+
             date_picker.Format = DateTimePickerFormat.Custom;
             date_picker.CustomFormat = "dd/MM/yyyy";
 
@@ -230,6 +231,20 @@ namespace Nova_Tools
 
         }
 
+        void update_data()
+        {
+            string[] data = new string[5];
+            dataGridView2.Rows.Clear();
+            foreach (DataRow row1 in nir.Rows)
+            {
+                data[0] = row1["Nume_produs"].ToString(); data[1] = row1["Pret_intrare"].ToString();
+                data[2] = row1["Valoare_TVA"].ToString(); data[3] = row1["Pret_iesire"].ToString();
+                data[4] = row1["Cantitate"].ToString();
+
+                dataGridView2.Rows.Add(data);
+            }
+        }
+
         private void adauga_button_Click(object sender, EventArgs e)
         {
             if(nume_produs_textbox.Text == "" || pret_iesire_textbox.Text == "" || pret_intrare_textbox.Text == "" || cantitate_textbox.Text == "" || tva_textbox.Text == "")
@@ -239,19 +254,28 @@ namespace Nova_Tools
             }
 
             row = nir.NewRow();
-            string[] data = new string[5];
+            
+            bool found = false;
 
-            row["Nume_produs"] = nume_produs_textbox.Text; data[0] = nume_produs_textbox.Text;
-            row["Pret_intrare"] = Convert.ToDouble(pret_intrare_textbox.Text); data[1] = pret_intrare_textbox.Text;
-            row["Valoare_TVA"] = Convert.ToDouble(tva_textbox.Text); data[2] = tva_textbox.Text;
-            row["Pret_iesire"] = Convert.ToDouble(pret_iesire_textbox.Text); data[3] = pret_iesire_textbox.Text;
-            row["Cantitate"] = Convert.ToDouble(cantitate_textbox.Text); data[4] = cantitate_textbox.Text;
+            foreach (DataRow row1 in nir.Rows)
+                if (row1["Nume_produs"].ToString() == nume_produs_textbox.Text && pret_intrare_textbox.Text == row1["Pret_intrare"].ToString() && pret_iesire_textbox.Text == row1["Pret_iesire"].ToString())
+                {
+                    row1["Cantitate"] = Convert.ToDouble(row1["Cantitate"].ToString()) + Convert.ToDouble(cantitate_textbox.Text);
+                    found = true;
+                }
+
+            row["Nume_produs"] = nume_produs_textbox.Text;
+            row["Pret_intrare"] = Convert.ToDouble(pret_intrare_textbox.Text);
+            row["Valoare_TVA"] = Convert.ToDouble(tva_textbox.Text);
+            row["Pret_iesire"] = Convert.ToDouble(pret_iesire_textbox.Text);
+            row["Cantitate"] = Convert.ToDouble(cantitate_textbox.Text);
             row["Unitate_de_masura"] = dataGridView1[5, product_index].Value.ToString();
             row["Brand_nir"] = dataGridView1[3, product_index].Value.ToString();
             row["Categorie_nir"] = dataGridView1[4, product_index].Value.ToString();
 
-            dataGridView2.Rows.Add(data);
-            nir.Rows.Add(row);
+            if(!found)
+                nir.Rows.Add(row);
+            update_data();
 
             nume_produs_textbox.Clear(); pret_iesire_textbox.Clear(); pret_intrare_textbox.Clear(); cantitate_textbox.Clear(); tva_textbox.Text = "19.00";
 
@@ -318,6 +342,8 @@ namespace Nova_Tools
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0)
+                return;
             product_index = e.RowIndex;
 
             nume_produs_textbox.Text = dataGridView1[1, product_index].Value.ToString() + " " + dataGridView1[2, product_index].Value.ToString();
@@ -336,7 +362,7 @@ namespace Nova_Tools
                 if (exist)
                 {
                     dr.Read();
-                    cantitate += Convert.ToDouble(dr[5].ToString());
+                    cantitate += Convert.ToDouble(dr[4].ToString());
                 }
                 dr.Close(); query.Dispose();
 

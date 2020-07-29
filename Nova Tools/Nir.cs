@@ -334,24 +334,27 @@ namespace Nova_Tools
 
             g.DrawLine(new Pen(Brushes.Black), new Point(xstart_tabel += 165, ystart_tabel - 20 * rows), new Point(xstart_tabel, ystart_tabel));
 
-            int litere = 0, randuri = 0;
+            int randuri = 0;
             string rand = "";
             string[] cuvinte = row1["Nume_produs"].ToString().Split(' ');
+            string rand_plus_curent = "";
+            SizeF stringSize = new SizeF();
 
             for (int i = 0; i < cuvinte.Length; ++i)
             {
-                if (litere + cuvinte[i].Length > 30)
+                rand_plus_curent = rand + cuvinte[i] + " ";
+                stringSize = g.MeasureString(rand_plus_curent, font_normal);
+                if (stringSize.Width <= 185)
+                    rand += cuvinte[i] + " ";
+                else
                 {
+                    g.DrawString(rand, font_normal7, Brushes.Black, new Point(xstart_tabel - 163, ystart_tabel - 16 * (rows - randuri)));
+                    rand = cuvinte[i];
                     ++randuri;
-                    g.DrawString(rand, font_normal7, Brushes.Black, new Point(xstart_tabel - 163, ystart_tabel - 16 * (rows - randuri + 1)));
-                    rand = "";
-                    litere = 0;
                 }
-                litere += cuvinte[i].Length + 1;
-                rand += cuvinte[i] + " ";
-                if (i == cuvinte.Length - 1)
-                    g.DrawString(rand, font_normal7, Brushes.Black, new Point(xstart_tabel - 163, ystart_tabel - 16));
             }
+
+            g.DrawString(rand, font_normal7, Brushes.Black, new Point(xstart_tabel - 163, ystart_tabel - 16 * (rows - randuri)));
 
             g.DrawLine(new Pen(Brushes.Black), new Point(xstart_tabel += 34, ystart_tabel - 20 * rows), new Point(xstart_tabel, ystart_tabel));
 
@@ -451,6 +454,8 @@ namespace Nova_Tools
             double total_tva = 0, total_adaos_comercial = 0, total_nir = 0, total_vanzare = 0;
             string font_family = "Arial";
             Font font_big_bold = new Font(font_family, 10, FontStyle.Bold);
+            Font font_normal = new Font(font_family, 8);
+            SizeF stringSize = new SizeF();
 
             foreach (DataRow row1 in nir.Rows)
             {
@@ -458,10 +463,11 @@ namespace Nova_Tools
                 total_adaos_comercial += (Convert.ToDouble(row1["Pret_iesire"].ToString()) / 1.19 - Convert.ToDouble(row1["Pret_intrare_fara_TVA"].ToString()));
                 total_nir += Convert.ToDouble(row1["Pret_intrare_fara_TVA"].ToString()) * Convert.ToDouble(row1["Cantitate"].ToString());
                 total_vanzare += Convert.ToDouble(row1["Pret_iesire"].ToString()) * Convert.ToDouble(row1["Cantitate"].ToString());
-                if ((row["Nume_produs"].ToString().Length) % 30 != 0)
-                    rows = ((row["Nume_produs"].ToString().Length) / 30) + 1;
+                stringSize = g.MeasureString(row["Nume_produs"].ToString(), font_normal);
+                if (stringSize.Width % 160 != 0)
+                    rows = Convert.ToInt32(stringSize.Width) / 160 + 1;
                 else
-                    rows = ((row["Nume_produs"].ToString().Length) / 30);
+                    rows = Convert.ToInt32(stringSize.Width) / 160 + 1;
                 draw_product(e, ystart_label += 20 * rows, row1, ++index, rows);
             }
 
@@ -497,11 +503,11 @@ namespace Nova_Tools
 
         private void Nir_Load(object sender, EventArgs e)
         {
-            using (StreamReader sr = new StreamReader("connection_string.txt"))
-            {
-                string connection_string = sr.ReadLine();
-                conn = new SqlConnection(connection_string);
-            }
+            string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).ToString();
+            path = path.Remove(path.Length - 9);
+            path = path.Remove(0, 6);
+            string connection_string = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =" + path + @"SharpBill.mdf; Integrated Security = True; Connect Timeout = 30";
+            conn = new SqlConnection(connection_string);
 
             nir = new DataTable();
 

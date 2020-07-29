@@ -1,5 +1,3 @@
-D:\Nova Tools Program\Nova Tools\Nova Tools\bin\Debug\Nova.mdf
-D:\Nova Tools Program\Nova Tools\Nova Tools\bin\Debug\Nova_log.ldf
 D:\Nova Tools Program\Nova Tools\Nova Tools\bin\Debug\Nova Tools.exe.config
 D:\Nova Tools Program\Nova Tools\Nova Tools\bin\Debug\Nova Tools.exe
 D:\Nova Tools Program\Nova Tools\Nova Tools\bin\Debug\Nova Tools.pdb
@@ -27,3 +25,5 @@ D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Facturi.resourc
 D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Factura.resources
 D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Stoc.resources
 D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Stoc_nou.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\bin\Debug\SharpBill.mdf
+D:\Nova Tools Program\Nova Tools\Nova Tools\bin\Debug\SharpBill_log.ldf

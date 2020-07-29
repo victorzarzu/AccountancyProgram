@@ -24,11 +24,11 @@ namespace Nova_Tools
         {
             InitializeComponent();
 
-            using (StreamReader sr = new StreamReader("connection_string.txt"))
-            {
-                string connection_string = sr.ReadLine();
-                conn = new SqlConnection(connection_string);
-            }
+            string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).ToString();
+            path = path.Remove(path.Length - 9);
+            path = path.Remove(0, 6);
+            string connection_string = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =" + path + @"SharpBill.mdf; Integrated Security = True; Connect Timeout = 30";
+            conn = new SqlConnection(connection_string);
 
             furnizori = f;
         }
