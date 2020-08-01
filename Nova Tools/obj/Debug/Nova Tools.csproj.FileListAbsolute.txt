@@ -27,3 +27,32 @@ D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Stoc.resources
 D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Debug\Nova_Tools.Stoc_nou.resources
 D:\Nova Tools Program\Nova Tools\Nova Tools\bin\Debug\SharpBill.mdf
 D:\Nova Tools Program\Nova Tools\Nova Tools\bin\Debug\SharpBill_log.ldf
+D:\Accountacy Program\AccountancyProgram\Nova Tools\bin\Debug\SharpBill.mdf
+D:\Accountacy Program\AccountancyProgram\Nova Tools\bin\Debug\SharpBill_log.ldf
+D:\Accountacy Program\AccountancyProgram\Nova Tools\bin\Debug\Nova Tools.exe.config
+D:\Accountacy Program\AccountancyProgram\Nova Tools\bin\Debug\Nova Tools.exe
+D:\Accountacy Program\AccountancyProgram\Nova Tools\bin\Debug\Nova Tools.pdb
+D:\Accountacy Program\AccountancyProgram\Nova Tools\obj\Debug\Nova Tools.csprojAssemblyReference.cache
+D:\Accountacy Program\AccountancyProgram\Nova Tools\obj\Debug\Nova_Tools.Clienti.resources
+D:\Accountacy Program\AccountancyProgram\Nova Tools\obj\Debug\Nova_Tools.Client_nou.resources
+D:\Accountacy Program\AccountancyProgram\Nova Tools\obj\Debug\Nova_Tools.Creeaza_iesire.resources
+D:\Accountacy Program\AccountancyProgram\Nova Tools\obj\Debug\Nova_Tools.Creeaza_intrare.resources
+D:\Accountacy Program\AccountancyProgram\Nova Tools\obj\Debug\Nova_Tools.Factura.resources
+D:\Accountacy Program\AccountancyProgram\Nova Tools\obj\Debug\Nova_Tools.Facturi.resources
+D:\Accountacy Program\AccountancyProgram\Nova Tools\obj\Debug\Nova_Tools.Iesiri.resources
+D:\Accountacy Program\AccountancyProgram\Nova Tools\obj\Debug\Nova_Tools.Nir.resources
+D:\Accountacy Program\AccountancyProgram\Nova Tools\obj\Debug\Nova_Tools.Plati.resources
+D:\Accountacy Program\AccountancyProgram\Nova Tools\obj\Debug\Nova_Tools.Produse.resources
+D:\Accountacy Program\AccountancyProgram\Nova Tools\obj\Debug\Nova_Tools.Produs_nou.resources
+D:\Accountacy Program\AccountancyProgram\Nova Tools\obj\Debug\Nova_Tools.Firma.resources
+D:\Accountacy Program\AccountancyProgram\Nova Tools\obj\Debug\Nova_Tools.Furnizori.resources
+D:\Accountacy Program\AccountancyProgram\Nova Tools\obj\Debug\Nova_Tools.Furnizor_nou.resources
+D:\Accountacy Program\AccountancyProgram\Nova Tools\obj\Debug\Nova_Tools.Intrari.resources
+D:\Accountacy Program\AccountancyProgram\Nova Tools\obj\Debug\Nova_Tools.Form1.resources
+D:\Accountacy Program\AccountancyProgram\Nova Tools\obj\Debug\Nova_Tools.Properties.Resources.resources
+D:\Accountacy Program\AccountancyProgram\Nova Tools\obj\Debug\Nova_Tools.Stoc.resources
+D:\Accountacy Program\AccountancyProgram\Nova Tools\obj\Debug\Nova_Tools.Stoc_nou.resources
+D:\Accountacy Program\AccountancyProgram\Nova Tools\obj\Debug\Nova Tools.csproj.GenerateResource.cache
+D:\Accountacy Program\AccountancyProgram\Nova Tools\obj\Debug\Nova Tools.csproj.CoreCompileInputs.cache
+D:\Accountacy Program\AccountancyProgram\Nova Tools\obj\Debug\Nova Tools.exe
+D:\Accountacy Program\AccountancyProgram\Nova Tools\obj\Debug\Nova Tools.pdb

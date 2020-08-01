@@ -183,9 +183,8 @@ namespace Nova_Tools
         private void Creeaza_intrare_Load(object sender, EventArgs e)
         {
             string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).ToString();
-            path = path.Remove(path.Length - 9);
             path = path.Remove(0, 6);
-            string connection_string = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =" + path + @"SharpBill.mdf; Integrated Security = True; Connect Timeout = 30";
+            string connection_string = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =" + path + @"\SharpBill.mdf; Integrated Security = True; Connect Timeout = 30";
             conn = new SqlConnection(connection_string);
 
             date_picker.Format = DateTimePickerFormat.Custom;

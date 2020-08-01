@@ -176,11 +176,12 @@ namespace Nova_Tools
 
             DateTime data = DateTime.Parse(date_picker.Value.Date.ToString());
 
-            SqlCommand insert = new SqlCommand("INSERT INTO Facturi(Nume_client, Numar_factura, Data, Valoare_totala, Rest_de_plata, Produse, Preturi_de_vanzare, Discounts, UMs, Cantitati, Valuta)  values(@nume_client, @numar_factura, @data, @valoare_totala, @rest_de_plata, @produse, @preturi_de_vanzare, @discounts, @ums, @cantitati, @valuta)", conn);
+            SqlCommand insert = new SqlCommand("INSERT INTO Facturi(Nume_client, Numar_factura, Data, Valoare_totala, Rest_de_plata, Produse, Preturi_de_vanzare, Discounts, UMs, Cantitati, Valuta, Comentarii)  values(@nume_client, @numar_factura, @data, @valoare_totala, @rest_de_plata, @produse, @preturi_de_vanzare, @discounts, @ums, @cantitati, @valuta, @comentarii)", conn);
             insert.Parameters.AddWithValue("@nume_client", clienti_combobox.SelectedItem.ToString()); insert.Parameters.AddWithValue("@numar_factura", numar_factura);
             insert.Parameters.AddWithValue("@data", data); insert.Parameters.AddWithValue("@valoare_totala", valoare_totala); insert.Parameters.AddWithValue("@rest_de_plata", valoare_totala);
             insert.Parameters.AddWithValue("@produse", produse); insert.Parameters.AddWithValue("@preturi_de_vanzare", preturi_de_vanzare); insert.Parameters.AddWithValue("@discounts", discounts);
             insert.Parameters.AddWithValue("@ums", ums); insert.Parameters.AddWithValue("@cantitati", cantitati); insert.Parameters.AddWithValue("@valuta", valuta_combobox.SelectedItem.ToString());
+            insert.Parameters.AddWithValue("@comentarii", comentarii_combobox.Text);
 
             insert.ExecuteNonQuery();
             insert.Dispose();
@@ -233,9 +234,8 @@ namespace Nova_Tools
         private void Creeaza_iesire_Load(object sender, EventArgs e)
         {
             string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).ToString();
-            path = path.Remove(path.Length - 9);
             path = path.Remove(0, 6);
-            string connection_string = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =" + path + @"SharpBill.mdf; Integrated Security = True; Connect Timeout = 30";
+            string connection_string = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =" + path + @"\SharpBill.mdf; Integrated Security = True; Connect Timeout = 30";
             conn = new SqlConnection(connection_string);
 
             conn.Open();

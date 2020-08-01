@@ -66,21 +66,22 @@
             this.discount_textbox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
-            this.creeaza = new System.Windows.Forms.Button();
+            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.date_picker = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
+            this.valuta_combobox = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.clienti_combobox = new System.Windows.Forms.ComboBox();
+            this.creeaza = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Produs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantitate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pret_intrare = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.date_picker = new System.Windows.Forms.DateTimePicker();
-            this.label9 = new System.Windows.Forms.Label();
-            this.valuta_combobox = new System.Windows.Forms.ComboBox();
+            this.comentarii_combobox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -96,10 +97,10 @@
             this.tableLayoutPanel12.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
+            this.tableLayoutPanel14.SuspendLayout();
             this.tableLayoutPanel18.SuspendLayout();
             this.tableLayoutPanel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.tableLayoutPanel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -559,15 +560,16 @@
             // 
             this.tableLayoutPanel13.ColumnCount = 1;
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel13.Controls.Add(this.tableLayoutPanel15, 0, 0);
             this.tableLayoutPanel13.Controls.Add(this.dataGridView2, 0, 1);
+            this.tableLayoutPanel13.Controls.Add(this.comentarii_combobox, 0, 2);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel13.Location = new System.Drawing.Point(502, 3);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
-            this.tableLayoutPanel13.RowCount = 2;
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.69182F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.30817F));
+            this.tableLayoutPanel13.RowCount = 3;
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.659247F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.68315F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.657603F));
             this.tableLayoutPanel13.Size = new System.Drawing.Size(540, 648);
             this.tableLayoutPanel13.TabIndex = 1;
             // 
@@ -587,22 +589,46 @@
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 1;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(534, 63);
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(534, 56);
             this.tableLayoutPanel15.TabIndex = 0;
             // 
-            // creeaza
+            // tableLayoutPanel14
             // 
-            this.creeaza.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.creeaza.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.creeaza.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.creeaza.ForeColor = System.Drawing.Color.White;
-            this.creeaza.Location = new System.Drawing.Point(410, 15);
-            this.creeaza.Name = "creeaza";
-            this.creeaza.Size = new System.Drawing.Size(112, 32);
-            this.creeaza.TabIndex = 4;
-            this.creeaza.Text = "Creeaza";
-            this.creeaza.UseVisualStyleBackColor = false;
-            this.creeaza.Click += new System.EventHandler(this.creeaza_Click);
+            this.tableLayoutPanel14.ColumnCount = 1;
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.Controls.Add(this.label8, 0, 0);
+            this.tableLayoutPanel14.Controls.Add(this.date_picker, 0, 1);
+            this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(136, 3);
+            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
+            this.tableLayoutPanel14.RowCount = 2;
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(127, 50);
+            this.tableLayoutPanel14.TabIndex = 5;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label8.Location = new System.Drawing.Point(39, 2);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(48, 20);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Data";
+            // 
+            // date_picker
+            // 
+            this.date_picker.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.date_picker.CustomFormat = "dd.MM.yyyy";
+            this.date_picker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.date_picker.Location = new System.Drawing.Point(3, 28);
+            this.date_picker.Name = "date_picker";
+            this.date_picker.Size = new System.Drawing.Size(121, 20);
+            this.date_picker.TabIndex = 2;
             // 
             // tableLayoutPanel18
             // 
@@ -618,8 +644,32 @@
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(127, 57);
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(127, 50);
             this.tableLayoutPanel18.TabIndex = 2;
+            // 
+            // valuta_combobox
+            // 
+            this.valuta_combobox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.valuta_combobox.FormattingEnabled = true;
+            this.valuta_combobox.Items.AddRange(new object[] {
+            "Lei",
+            "Euro"});
+            this.valuta_combobox.Location = new System.Drawing.Point(3, 28);
+            this.valuta_combobox.Name = "valuta_combobox";
+            this.valuta_combobox.Size = new System.Drawing.Size(121, 21);
+            this.valuta_combobox.TabIndex = 3;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label9.Location = new System.Drawing.Point(33, 2);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 20);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Valuta";
             // 
             // tableLayoutPanel16
             // 
@@ -635,7 +685,7 @@
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(127, 57);
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(127, 50);
             this.tableLayoutPanel16.TabIndex = 0;
             // 
             // label6
@@ -644,7 +694,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label6.Location = new System.Drawing.Point(36, 4);
+            this.label6.Location = new System.Drawing.Point(36, 2);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 20);
             this.label6.TabIndex = 1;
@@ -654,10 +704,24 @@
             // 
             this.clienti_combobox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.clienti_combobox.FormattingEnabled = true;
-            this.clienti_combobox.Location = new System.Drawing.Point(3, 32);
+            this.clienti_combobox.Location = new System.Drawing.Point(3, 28);
             this.clienti_combobox.Name = "clienti_combobox";
             this.clienti_combobox.Size = new System.Drawing.Size(121, 21);
             this.clienti_combobox.TabIndex = 2;
+            // 
+            // creeaza
+            // 
+            this.creeaza.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.creeaza.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.creeaza.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.creeaza.ForeColor = System.Drawing.Color.White;
+            this.creeaza.Location = new System.Drawing.Point(410, 12);
+            this.creeaza.Name = "creeaza";
+            this.creeaza.Size = new System.Drawing.Size(112, 32);
+            this.creeaza.TabIndex = 4;
+            this.creeaza.Text = "Creeaza";
+            this.creeaza.UseVisualStyleBackColor = false;
+            this.creeaza.Click += new System.EventHandler(this.creeaza_Click);
             // 
             // dataGridView2
             // 
@@ -668,9 +732,9 @@
             this.Pret_intrare,
             this.Discount});
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 72);
+            this.dataGridView2.Location = new System.Drawing.Point(3, 65);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(534, 573);
+            this.dataGridView2.Size = new System.Drawing.Size(534, 516);
             this.dataGridView2.TabIndex = 1;
             // 
             // Produs
@@ -693,67 +757,14 @@
             this.Discount.HeaderText = "Discount";
             this.Discount.Name = "Discount";
             // 
-            // tableLayoutPanel14
+            // comentarii_combobox
             // 
-            this.tableLayoutPanel14.ColumnCount = 1;
-            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.Controls.Add(this.label8, 0, 0);
-            this.tableLayoutPanel14.Controls.Add(this.date_picker, 0, 1);
-            this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel14.Location = new System.Drawing.Point(136, 3);
-            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
-            this.tableLayoutPanel14.RowCount = 2;
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(127, 57);
-            this.tableLayoutPanel14.TabIndex = 5;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label8.Location = new System.Drawing.Point(39, 4);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 20);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Data";
-            // 
-            // date_picker
-            // 
-            this.date_picker.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.date_picker.CustomFormat = "dd.MM.yyyy";
-            this.date_picker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.date_picker.Location = new System.Drawing.Point(3, 32);
-            this.date_picker.Name = "date_picker";
-            this.date_picker.Size = new System.Drawing.Size(121, 20);
-            this.date_picker.TabIndex = 2;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label9.Location = new System.Drawing.Point(33, 4);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 20);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Valuta";
-            // 
-            // valuta_combobox
-            // 
-            this.valuta_combobox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.valuta_combobox.FormattingEnabled = true;
-            this.valuta_combobox.Items.AddRange(new object[] {
-            "Lei",
-            "Euro"});
-            this.valuta_combobox.Location = new System.Drawing.Point(3, 32);
-            this.valuta_combobox.Name = "valuta_combobox";
-            this.valuta_combobox.Size = new System.Drawing.Size(121, 21);
-            this.valuta_combobox.TabIndex = 3;
+            this.comentarii_combobox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comentarii_combobox.Location = new System.Drawing.Point(3, 587);
+            this.comentarii_combobox.Multiline = true;
+            this.comentarii_combobox.Name = "comentarii_combobox";
+            this.comentarii_combobox.Size = new System.Drawing.Size(534, 58);
+            this.comentarii_combobox.TabIndex = 2;
             // 
             // Creeaza_iesire
             // 
@@ -788,14 +799,15 @@
             this.tableLayoutPanel12.ResumeLayout(false);
             this.tableLayoutPanel12.PerformLayout();
             this.tableLayoutPanel13.ResumeLayout(false);
+            this.tableLayoutPanel13.PerformLayout();
             this.tableLayoutPanel15.ResumeLayout(false);
+            this.tableLayoutPanel14.ResumeLayout(false);
+            this.tableLayoutPanel14.PerformLayout();
             this.tableLayoutPanel18.ResumeLayout(false);
             this.tableLayoutPanel18.PerformLayout();
             this.tableLayoutPanel16.ResumeLayout(false);
             this.tableLayoutPanel16.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.tableLayoutPanel14.ResumeLayout(false);
-            this.tableLayoutPanel14.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -855,5 +867,6 @@
         private System.Windows.Forms.DateTimePicker date_picker;
         private System.Windows.Forms.ComboBox valuta_combobox;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox comentarii_combobox;
     }
 }

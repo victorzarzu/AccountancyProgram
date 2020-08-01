@@ -25,9 +25,8 @@ namespace Nova_Tools
             InitializeComponent();
 
             string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).ToString();
-            path = path.Remove(path.Length - 9);
             path = path.Remove(0, 6);
-            string connection_string = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =" + path + @"SharpBill.mdf; Integrated Security = True; Connect Timeout = 30";
+            string connection_string = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =" + path + @"\SharpBill.mdf; Integrated Security = True; Connect Timeout = 30";
             conn = new SqlConnection(connection_string);
 
             furnizori = f;
@@ -36,6 +35,11 @@ namespace Nova_Tools
         private void Furnizor_nou_FormClosed(object sender, FormClosedEventArgs e)
         {
             parentForm.Show();
+        }
+
+        private void Furnizor_nou_Load(object sender, EventArgs e)
+        {
+
         }
 
         void fill_datagridview(DataGridView dgv)

@@ -366,6 +366,7 @@
             this.Name = "Client_nou";
             this.Text = "Client nou";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Client_nou_FormClosed);
+            this.Load += new System.EventHandler(this.Client_nou_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
