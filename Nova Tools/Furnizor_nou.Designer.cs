@@ -278,7 +278,6 @@
             this.Name = "Furnizor_nou";
             this.Text = "Furnizor nou";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Furnizor_nou_FormClosed);
-            this.Load += new System.EventHandler(this.Furnizor_nou_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);

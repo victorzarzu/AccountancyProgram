@@ -1,0 +1,28 @@
+D:\Nova Tools Program\Nova Tools\Nova Tools\bin\Release\SharpBill.mdf
+D:\Nova Tools Program\Nova Tools\Nova Tools\bin\Release\SharpBill_log.ldf
+D:\Nova Tools Program\Nova Tools\Nova Tools\bin\Release\Nova Tools.exe.config
+D:\Nova Tools Program\Nova Tools\Nova Tools\bin\Release\Nova Tools.exe
+D:\Nova Tools Program\Nova Tools\Nova Tools\bin\Release\Nova Tools.pdb
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Release\Nova_Tools.Clienti.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Release\Nova_Tools.Client_nou.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Release\Nova_Tools.Creeaza_iesire.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Release\Nova_Tools.Creeaza_intrare.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Release\Nova_Tools.Factura.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Release\Nova_Tools.Facturi.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Release\Nova_Tools.Iesiri.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Release\Nova_Tools.Nir.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Release\Nova_Tools.Plati.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Release\Nova_Tools.Produse.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Release\Nova_Tools.Produs_nou.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Release\Nova_Tools.Firma.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Release\Nova_Tools.Furnizori.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Release\Nova_Tools.Furnizor_nou.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Release\Nova_Tools.Intrari.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Release\Nova_Tools.Form1.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Release\Nova_Tools.Properties.Resources.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Release\Nova_Tools.Stoc.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Release\Nova_Tools.Stoc_nou.resources
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Release\Nova Tools.csproj.GenerateResource.cache
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Release\Nova Tools.csproj.CoreCompileInputs.cache
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Release\Nova Tools.exe
+D:\Nova Tools Program\Nova Tools\Nova Tools\obj\Release\Nova Tools.pdb

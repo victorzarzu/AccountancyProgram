@@ -189,7 +189,7 @@ namespace Nova_Tools
             client = "";
             int nr = 0;
 
-            for (int i = 0; i < client_split.Length; ++i)
+            for (int i = 0; i < client_split.Length; ++i) 
             {
                 client += client_split[i] + " ";
                 ++nr;
@@ -204,7 +204,7 @@ namespace Nova_Tools
                     client = "";
                 }
             }
-            if (client != "")
+            if(client != "")
                 g.DrawString(client, font_medium_bold, Brushes.Black, xstart_right + 100, ystart_right += ystep);
 
             g.DrawString("CIF/CUI/CNP: ", font_medium, Brushes.Black, xstart_right, ystart_right += ystep);
@@ -227,7 +227,7 @@ namespace Nova_Tools
                     adresa = "";
                 }
             }
-            if (adresa != "")
+            if(adresa != "")
                 g.DrawString(adresa, font_medium_bold, Brushes.Black, xstart_right + 65, ystart_right += ystep);
 
             g.DrawString("Cod IBAN: ", font_medium, Brushes.Black, xstart_right, ystart_right += ystep);
@@ -243,13 +243,13 @@ namespace Nova_Tools
             {
                 banca += banca_split[i] + " ";
                 ++nr;
-                if (nr == 4)
+                if(nr == 4)
                 {
                     g.DrawString(banca, font_medium_bold, Brushes.Black, xstart_right + 60, ystart_right += ystep);
                     banca = "";
                 }
             }
-            if (banca != "")
+            if(banca != "")
                 g.DrawString(banca, font_medium_bold, Brushes.Black, xstart_right + 60, ystart_right += ystep);
 
             g.DrawString("FACTURĂ", font_giant_bold, Brushes.Black, e.PageBounds.Width / 2 - 100, 245);
@@ -271,7 +271,7 @@ namespace Nova_Tools
             int header_height_end = 385, header_width = cadran_start.X + 15;
             int height_bottom = e.PageBounds.Height - 185;
 
-            g.DrawLine(new Pen(Brushes.Black), new Point(Convert.ToInt32(xstart_left), header_height_end), new Point(e.PageBounds.Width - Convert.ToInt32(xstart_left), header_height_end));
+            g.DrawLine(new Pen(Brushes.Black), new Point(Convert.ToInt32(xstart_left),header_height_end), new Point(e.PageBounds.Width - Convert.ToInt32(xstart_left), header_height_end));
             g.DrawString("Nr.", font_normal, Brushes.Black, new Point(header_width, cadran_start.Y + 10));
             g.DrawString("crt.", font_normal, Brushes.Black, new Point(header_width, cadran_start.Y + 25));
             g.DrawLine(new Pen(Brushes.Black), new Point(header_width += 40, cadran_height), new Point(header_width, height_bottom));
@@ -297,7 +297,7 @@ namespace Nova_Tools
             }
             else
             {
-                g.DrawString("Preț unitar", font_normal, Brushes.Black, new Point(header_width += 21, cadran_start.Y + 13));
+                g.DrawString("Preț unitar", font_normal, Brushes.Black, new Point(header_width += 21, cadran_start.Y +13));
                 g.DrawString("-euro-", font_normal, Brushes.Black, new Point(header_width += 12, cadran_start.Y + 28));
             }
             g.DrawLine(new Pen(Brushes.Black), new Point(header_width += 75, cadran_height), new Point(header_width, e.PageBounds.Height - 30));
@@ -351,12 +351,12 @@ namespace Nova_Tools
 
             SizeF stringSize = new SizeF();
             stringSize = g.MeasureString(comentarii, font_normal);
-            g.DrawString(comentarii, font_normal_bold, Brushes.Black, new Point(75, height_bottom - 20 - Convert.ToInt32(stringSize.Height)));
+            g.DrawString(comentarii, font_normal_bold, Brushes.Black, new Point(75, height_bottom - 20 - 3 - Convert.ToInt32(stringSize.Height)));
 
 
             g.DrawString("Factura circulă fără ștampilă și semnătură conform Legii 227/2015 art. 319, alin. 29 din Codul Fiscal.", font_normal_bold, Brushes.Black, new Point(75, height_bottom - 20));
             g.DrawLine(new Pen(Brushes.Black), new Point(Convert.ToInt32(xstart_left), height_bottom), new Point(e.PageBounds.Width - Convert.ToInt32(xstart_left), height_bottom));
-
+            
             g.DrawLine(new Pen(Brushes.Black), new Point(Convert.ToInt32(xstart_left), height_bottom + 25), new Point(pret_unitar_width, height_bottom + 25));
             g.DrawString("Întocmit: ZARZU MARLENA; CNP: 2740601044424; CI :XC 685898", font_normal_bold, Brushes.Black, new Point(25, height_bottom + 5));
 
@@ -381,7 +381,7 @@ namespace Nova_Tools
             g.DrawString("TOTAL", font_normal, Brushes.Black, new Point(Convert.ToInt32(xstart_left += 345), height_bottom + 31));
             g.DrawString("Semnătură de primire", font_small, Brushes.Black, new Point(Convert.ToInt32(xstart_left -= 40), height_bottom + 60));
             g.DrawString("Total de plată", font_small, Brushes.Black, new Point(Convert.ToInt32(xstart_left += 145), height_bottom + 60));
-
+            
         }
 
         void draw_data(System.Drawing.Printing.PrintPageEventArgs e)
@@ -449,7 +449,7 @@ namespace Nova_Tools
                 double prt_total = Math.Round(prt * cant, 2);
                 g.DrawString(pret_total, font_normal, Brushes.Black, new Point(header_width += 113, header_height_end + 10 * randuri));
                 x_pret_unitate = header_width;
-                if (valuta == "Lei")
+                if(valuta == "Lei")
                     g.DrawString((Math.Round(prt_total * 0.19, 2)).ToString().Replace('.', ','), font_normal, Brushes.Black, new Point(header_width += 117, header_height_end + 10 * randuri));
                 else
                     g.DrawString("taxare inversă", font_normal, Brushes.Black, new Point(header_width += 100, header_height_end + 10 * randuri));
@@ -470,7 +470,7 @@ namespace Nova_Tools
             for (int i = plata.Length - 1; i > plata.Length - 4; --i)
                 total_plata = plata[i] + total_plata;
 
-            for (int i = plata.Length - 4; i >= 0; --i)
+            for(int i = plata.Length - 4;i >= 0;--i)
             {
                 ++cifre;
                 total_plata = plata[i] + total_plata;
@@ -482,9 +482,9 @@ namespace Nova_Tools
             }
 
             g.DrawString(valoare.ToString().Replace('.', ','), font_normal, Brushes.Black, new Point(x_pret_unitate, height_bottom));
-            if (valuta == "Lei")
+            if(valuta == "Lei")
                 g.DrawString(valoare_tva.ToString().Replace('.', ','), font_normal, Brushes.Black, new Point(x_valoare_tva, height_bottom));
-            if (valuta == "Lei")
+            if(valuta == "Lei")
                 g.DrawString(total_plata.Replace('.', ',') + " LEI", font_big_bold, Brushes.Black, new Point(e.PageBounds.Width - 215, e.PageBounds.Height - 65));
             else
                 g.DrawString(total_plata.Replace('.', ',') + " €", font_big_bold, Brushes.Black, new Point(e.PageBounds.Width - 215, e.PageBounds.Height - 65));
@@ -498,7 +498,7 @@ namespace Nova_Tools
 
         private void Factura_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (parentForm != null)
+            if(parentForm != null)
                 parentForm.Show();
         }
 
@@ -529,7 +529,7 @@ namespace Nova_Tools
             col.DataType = System.Type.GetType("System.Double");
             factura.Columns.Add(col);
         }
-
+        
         void load()
         {
             SqlCommand query = new SqlCommand("SELECT * FROM Facturi WHERE Numar_factura = @numar_factura", conn);
@@ -543,7 +543,7 @@ namespace Nova_Tools
             if (days.Length == 1)
                 days = "0" + days;
             if (month.Length == 1)
-                month = "0" + month;
+                month = "0" + month; 
             date = days + "." + month + "." + year;
             data_label.Text = date;
             numar_factura_label.Text = numar_factura.ToString();
@@ -577,7 +577,7 @@ namespace Nova_Tools
 
             string[] data = new string[4];
 
-            for (int i = 0; i < produse_split.Length - 1; ++i)
+            for(int i = 0;i < produse_split.Length - 1;++i)
             {
                 row = factura.NewRow();
 
@@ -605,7 +605,7 @@ namespace Nova_Tools
             load_tables();
 
             conn.Close();
-
+            
 
             dataGridView2.AllowUserToAddRows = dataGridView2.AllowUserToResizeRows = dataGridView2.RowHeadersVisible = false;
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;

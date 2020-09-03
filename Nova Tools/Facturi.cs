@@ -147,8 +147,7 @@ namespace Nova_Tools
                 data[0] = index.ToString(); data[1] = dr[0].ToString(); data[2] = dr[1].ToString();
                 data[3] = date; data[4] = dr[3].ToString().Replace('.', ','); data[5] = dr[4].ToString().Replace('.', ',');
 
-                if(DateTime.Compare(start_date_picker.Value, dat) <= 0 && DateTime.Compare(end_date_picker.Value, dat) >= 0)
-                    dataGridView1.Rows.Add(data);
+                dataGridView1.Rows.Add(data);
             }
             dr.Close(); query.Dispose();
         }
@@ -412,8 +411,7 @@ namespace Nova_Tools
                         data[5] = "";
                     }
 
-                    if (DateTime.Compare(start_date_picker.Value, dat) <= 0 && DateTime.Compare(end_date_picker.Value, dat) >= 0)
-                        dataGridView1.Rows.Add(data);
+                    dataGridView1.Rows.Add(data);
                 }
             }
         }

@@ -81,7 +81,7 @@
             this.Cantitate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pret_intrare = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comentarii_combobox = new System.Windows.Forms.TextBox();
+            this.comentarii_textbox = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -562,7 +562,7 @@
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel13.Controls.Add(this.tableLayoutPanel15, 0, 0);
             this.tableLayoutPanel13.Controls.Add(this.dataGridView2, 0, 1);
-            this.tableLayoutPanel13.Controls.Add(this.comentarii_combobox, 0, 2);
+            this.tableLayoutPanel13.Controls.Add(this.comentarii_textbox, 0, 2);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel13.Location = new System.Drawing.Point(502, 3);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
@@ -757,14 +757,14 @@
             this.Discount.HeaderText = "Discount";
             this.Discount.Name = "Discount";
             // 
-            // comentarii_combobox
+            // comentarii_textbox
             // 
-            this.comentarii_combobox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comentarii_combobox.Location = new System.Drawing.Point(3, 587);
-            this.comentarii_combobox.Multiline = true;
-            this.comentarii_combobox.Name = "comentarii_combobox";
-            this.comentarii_combobox.Size = new System.Drawing.Size(534, 58);
-            this.comentarii_combobox.TabIndex = 2;
+            this.comentarii_textbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comentarii_textbox.Location = new System.Drawing.Point(3, 587);
+            this.comentarii_textbox.Name = "comentarii_textbox";
+            this.comentarii_textbox.Size = new System.Drawing.Size(534, 58);
+            this.comentarii_textbox.TabIndex = 2;
+            this.comentarii_textbox.Text = "";
             // 
             // Creeaza_iesire
             // 
@@ -799,7 +799,6 @@
             this.tableLayoutPanel12.ResumeLayout(false);
             this.tableLayoutPanel12.PerformLayout();
             this.tableLayoutPanel13.ResumeLayout(false);
-            this.tableLayoutPanel13.PerformLayout();
             this.tableLayoutPanel15.ResumeLayout(false);
             this.tableLayoutPanel14.ResumeLayout(false);
             this.tableLayoutPanel14.PerformLayout();
@@ -835,7 +834,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox clienti_combobox;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.Button adauga_button;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
@@ -858,15 +856,16 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox discount_textbox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Produs;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantitate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pret_intrare;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Discount;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker date_picker;
         private System.Windows.Forms.ComboBox valuta_combobox;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox comentarii_combobox;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Produs;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantitate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pret_intrare;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Discount;
+        private System.Windows.Forms.RichTextBox comentarii_textbox;
     }
 }

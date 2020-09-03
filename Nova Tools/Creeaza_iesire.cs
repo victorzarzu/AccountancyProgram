@@ -181,7 +181,7 @@ namespace Nova_Tools
             insert.Parameters.AddWithValue("@data", data); insert.Parameters.AddWithValue("@valoare_totala", valoare_totala); insert.Parameters.AddWithValue("@rest_de_plata", valoare_totala);
             insert.Parameters.AddWithValue("@produse", produse); insert.Parameters.AddWithValue("@preturi_de_vanzare", preturi_de_vanzare); insert.Parameters.AddWithValue("@discounts", discounts);
             insert.Parameters.AddWithValue("@ums", ums); insert.Parameters.AddWithValue("@cantitati", cantitati); insert.Parameters.AddWithValue("@valuta", valuta_combobox.SelectedItem.ToString());
-            insert.Parameters.AddWithValue("@comentarii", comentarii_combobox.Text);
+            insert.Parameters.AddWithValue("@comentarii", comentarii_textbox.Text);
 
             insert.ExecuteNonQuery();
             insert.Dispose();

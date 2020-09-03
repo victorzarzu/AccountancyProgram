@@ -464,10 +464,9 @@ namespace Nova_Tools
                 total_nir += Convert.ToDouble(row1["Pret_intrare_fara_TVA"].ToString()) * Convert.ToDouble(row1["Cantitate"].ToString());
                 total_vanzare += Convert.ToDouble(row1["Pret_iesire"].ToString()) * Convert.ToDouble(row1["Cantitate"].ToString());
                 stringSize = g.MeasureString(row["Nume_produs"].ToString(), font_normal);
-                if (stringSize.Width % 160 != 0)
-                    rows = Convert.ToInt32(stringSize.Width) / 160 + 1;
-                else
-                    rows = Convert.ToInt32(stringSize.Width) / 160 + 1;
+                rows = Convert.ToInt32(stringSize.Width) / 185 + 1;
+                if (rows == 0)
+                    rows = 1;
                 draw_product(e, ystart_label += 20 * rows, row1, ++index, rows);
             }
 

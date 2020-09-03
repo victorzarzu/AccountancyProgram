@@ -37,10 +37,6 @@ namespace Nova_Tools
             parentForm.Show();
         }
 
-        private void Furnizor_nou_Load(object sender, EventArgs e)
-        {
-
-        }
 
         void fill_datagridview(DataGridView dgv)
         {
